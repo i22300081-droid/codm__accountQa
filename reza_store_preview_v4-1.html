@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reza Store | کالاف دیوتی موبایل</title>
+<style>
+:root{--bg:#090909;--panel:#171717;--red:#e11d2e;--red2:#ff3445;--text:#f7f7f7;--muted:#b9b9b9;--line:#343434}
+*{box-sizing:border-box}
+body{margin:0;background:radial-gradient(circle at top,#271014 0,#090909 42%);color:var(--text);font-family:Tahoma,Arial,sans-serif;line-height:1.8}
+.wrap{width:min(1000px,94%);margin:auto}
+header{text-align:center;padding:28px 12px 18px}
+.logo{font-weight:900;font-size:clamp(30px,6vw,48px);letter-spacing:1px;color:#fff;text-shadow:0 0 18px #e11d2e}
+.logo span{color:var(--red2)}
+header p{color:var(--muted);margin:3px 0 18px}
+.nav{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:0 auto 22px;max-width:850px}
+.nav button{background:#191919;color:white;border:1px solid #4a4a4a;border-radius:12px;padding:12px 6px;font:700 14px Tahoma;cursor:pointer;transition:.2s}
+.nav button.active,.nav button:hover{background:var(--red);border-color:var(--red);box-shadow:0 5px 20px #e11d2e35}
+main{padding-bottom:35px}
+.panel{display:none;background:linear-gradient(145deg,#191919,#101010);border:1px solid var(--line);border-radius:18px;padding:clamp(16px,4vw,28px);margin-bottom:18px;box-shadow:0 12px 35px #0008}
+.panel.active{display:block;animation:fade .2s ease}
+@keyframes fade{from{opacity:.45;transform:translateY(4px)}to{opacity:1;transform:none}}
+h2{font-size:22px;margin:0 0 12px;color:#fff}
+h3{margin:0 0 8px;font-size:17px}
+p{margin:7px 0}
+.muted{color:var(--muted);font-size:13px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px;margin-top:16px}
+.card{background:#101010;border:1px solid #363636;border-radius:14px;padding:16px}
+.price{font-size:20px;color:#ff5965;font-weight:900;margin:7px 0}
+button,.btn{font-family:Tahoma,Arial,sans-serif}
+.action{display:inline-flex;align-items:center;justify-content:center;gap:6px;background:var(--red);color:#fff;border:0;border-radius:10px;padding:11px 15px;font-weight:700;cursor:pointer;text-decoration:none;margin-top:8px}
+.action:hover{background:var(--red2)}
+.secondary{background:#282828;border:1px solid #444}
+form{display:grid;gap:12px;margin-top:15px}
+label{display:grid;gap:5px;font-size:14px;color:#e8e8e8}
+input,textarea,select{width:100%;background:#0b0b0b;border:1px solid #454545;color:#fff;border-radius:9px;padding:12px;font:14px Tahoma}
+input[type=file]{padding:9px}
+.notice{display:none;background:#202020;border:1px solid #555;border-radius:10px;padding:12px;margin-top:12px;white-space:pre-wrap;overflow-wrap:anywhere}
+.notice.show{display:block}
+.link{color:#ff6974}
+footer{text-align:center;color:#999;padding:10px 10px 30px;font-size:12px}
+@media(max-width:480px){.nav{gap:5px}.nav button{font-size:12px;padding:11px 3px}.panel{border-radius:13px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <div class="logo">REZA <span>STORE</span></div>
+  <p>فروش و خدمات اکانت Call of Duty Mobile</p>
+  <nav class="nav" aria-label="بخش‌های سایت">
+    <button type="button" class="active" data-target="gift">🎁 اکانت هدیه</button>
+    <button type="button" data-target="shop">🛒 شاپ اکانت</button>
+    <button type="button" data-target="ads">📢 تبلیغات روبیکا</button>
+  </nav>
+</header>
+<main>
+<section id="gift" class="panel active">
+  <h2>🎁 دریافت اکانت هدیه</h2>
+  <p>برای دریافت اکانت هدیه، ابتدا عضو کانال شو؛ سپس جهت تکمیل درخواست به آیدی زیر پیام بده و تمام مدارک لازم را ارسال کن.</p>
+  <p><strong>آیدی پشتیبانی: <a class="link" href="https://rubika.ir/Reza_RDidd" target="_blank" rel="noopener">@Reza_RDidd</a></strong></p>
+  <a class="action" href="https://rubika.ir/joinc/FEHAJCGE0YEYSAWBTBZLOPRGQVEMQBXG" target="_blank" rel="noopener">ورود به کانال هدیه</a>
+  <form id="giftForm">
+    <label>عکس مدرک عضویت در کانال<input name="proof" type="file" accept="image/*" required></label>
+    <button class="action" type="submit">آماده‌کردن درخواست هدیه</button>
+  </form>
+  <div class="notice" id="giftNotice"></div>
+  <p class="muted">جهت تکمیل درخواست، به آیدی بالا پیام دهید و تمام مدارک را ارسال کنید.</p>
+</section>
+
+<section id="shop" class="panel">
+  <h2>🛒 شاپ اکانت کالاف</h2>
+  <p>یکی از دسته‌ها را انتخاب کن تا فرم سفارش همان دسته باز شود.</p>
+  <div class="cards">
+    <article class="card">
+      <h3>اکانت نیم صیف</h3>
+      <p class="muted">بازه بودجه: ۵۰ تا ۱۰۰ صیف</p>
+      <button class="action choose-shop" type="button" data-category="اکانت نیم صیف" data-budget="۵۰ تا ۱۰۰ صیف">سفارش این دسته</button>
+    </article>
+    <article class="card">
+      <h3>اکانت کم پلی</h3>
+      <p class="muted">بازه بودجه: ۱۰۰ تا ۵۰۰ صیف</p>
+      <button class="action choose-shop" type="button" data-category="اکانت کم پلی" data-budget="۱۰۰ تا ۵۰۰ صیف">سفارش این دسته</button>
+    </article>
+    <article class="card">
+      <h3>اکانت ویژه</h3>
+      <p class="muted">بازه بودجه: ۵۰۰ تا ۵ میلیون صیف</p>
+      <button class="action choose-shop" type="button" data-category="اکانت ویژه" data-budget="۵۰۰ تا ۵ میلیون صیف">سفارش این دسته</button>
+    </article>
+  </div>
+  <div id="shopOrder" class="card" style="display:none;margin-top:18px">
+    <h3 id="shopHeading">ثبت سفارش</h3>
+    <form id="shopForm">
+      <input type="hidden" name="category" id="shopCategory">
+      <input type="hidden" name="budget" id="shopBudget">
+      <label>بودجه دقیق شما<input name="exactBudget" required placeholder="بودجه‌ات را وارد کن"></label>
+      <label>توضیحات یا ویژگی‌های اکانت دلخواه<textarea name="details" rows="3" placeholder="مثلاً اسلحه‌ها، اسکین‌ها یا موارد موردنظر"></textarea></label>
+      <button class="action" type="submit">ادامه و ارتباط با فروشنده</button>
+    </form>
+    <div id="shopNotice" class="notice"></div>
+  </div>
+  <p class="muted">جهت تکمیل سفارش، به آیدی زیر پیام دهید و تمام اطلاعات و مدارک لازم را ارسال کنید: <a class="link" href="https://rubika.ir/Reza_RDidd" target="_blank" rel="noopener">@Reza_RDidd</a></p>
+</section>
+
+<section id="ads" class="panel">
+  <h2>📢 تعرفه تبلیغات کانال روبیکا</h2>
+  <div class="cards">
+    <article class="card"><h3>پست آخر، ۲۴ ساعت</h3><div class="price">۱۵۰ هزار تومان</div><button class="action choose-ad" data-plan="پست آخر، ۲۴ ساعت" data-price="۱۵۰ هزار تومان" type="button">انتخاب تعرفه</button></article>
+    <article class="card"><h3>۲۴ ساعت + ۱۲ ساعت سنجاقک با ریپلای</h3><div class="price">۱۰۰ هزار تومان</div><button class="action choose-ad" data-plan="۲۴ ساعت + ۱۲ ساعت سنجاقک با ریپلای" data-price="۱۰۰ هزار تومان" data-reply="yes" type="button">انتخاب تعرفه</button></article>
+    <article class="card"><h3>۲۴ ساعت + ۱۲ ساعت سنجاقک بدون ریپلای</h3><div class="price">۹۰ هزار تومان</div><button class="action choose-ad" data-plan="۲۴ ساعت + ۱۲ ساعت سنجاقک بدون ریپلای" data-price="۹۰ هزار تومان" type="button">انتخاب تعرفه</button></article>
+    <article class="card"><h3>۱۲ ساعت + ۶ ساعت سنجاقک با ریپلای</h3><div class="price">۸۰ هزار تومان</div><button class="action choose-ad" data-plan="۱۲ ساعت + ۶ ساعت سنجاقک با ریپلای" data-price="۸۰ هزار تومان" data-reply="yes" type="button">انتخاب تعرفه</button></article>
+    <article class="card"><h3>۱۲ ساعت بدون سنجاقک و بدون ریپلای</h3><div class="price">۵۰ هزار تومان</div><button class="action choose-ad" data-plan="۱۲ ساعت بدون سنجاقک و بدون ریپلای" data-price="۵۰ هزار تومان" type="button">انتخاب تعرفه</button></article>
+  </div>
+  <div id="adOrder" class="card" style="display:none;margin-top:18px">
+    <h3 id="adHeading">ثبت سفارش تبلیغ</h3>
+    <form id="adForm">
+      <input type="hidden" name="plan" id="adPlan"><input type="hidden" name="price" id="adPrice">
+      <label>لینک پست یا کانال تبلیغ<input name="adLink" type="url" required placeholder="https://rubika.ir/..."></label>
+      <label>متن بنر / متن اصلی تبلیغ<input name="bannerText" required placeholder="متن تبلیغی که می‌خواهی منتشر شود"></label>
+      <label>متن تکمیلی (اختیاری)<textarea name="extraText" rows="3" placeholder="توضیحات یا اطلاعات تکمیلی تبلیغ"></textarea></label>
+      <label id="replyLabel" style="display:none">متن ریپلای<input name="replyText" placeholder="متن ریپلای تبلیغ"></label>
+      <button class="action" type="submit">آماده‌کردن سفارش تبلیغ</button>
+    </form>
+    <div id="adNotice" class="notice"></div>
+  </div>
+  <p class="muted">جهت تکمیل سفارش تبلیغات، به آیدی زیر پیام دهید و تمام اطلاعات و مدارک لازم را ارسال کنید: <a class="link" href="https://rubika.ir/Reza_RDidd" target="_blank" rel="noopener">@Reza_RDidd</a></p>
+</section>
+</main>
+<footer>Reza Store · پشتیبانی روبیکا: <a class="link" href="https://rubika.ir/Reza_RDidd" target="_blank" rel="noopener">@Reza_RDidd</a> · شاپ: <a class="link" href="https://rubika.ir/RezaStoreX" target="_blank" rel="noopener">@RezaStoreX</a></footer>
+</div>
+<script>
+const supportUrl='https://rubika.ir/Reza_RDidd';
+document.querySelectorAll('.nav button').forEach(btn=>btn.addEventListener('click',()=>{
+  document.querySelectorAll('.nav button').forEach(b=>b.classList.toggle('active',b===btn));
+  document.querySelectorAll('.panel').forEach(p=>p.classList.toggle('active',p.id===btn.dataset.target));
+}));
+function showNotice(el,text){
+  el.textContent=text;
+  el.classList.add('show');
+  const copy=document.createElement('button');
+  copy.type='button'; copy.className='action secondary'; copy.textContent='کپی متن سفارش';
+  copy.onclick=async()=>{try{await navigator.clipboard.writeText(text);copy.textContent='کپی شد؛ حالا در روبیکا ارسال کن';}catch(e){copy.textContent='متن بالا را دستی کپی کن';}};
+  el.appendChild(document.createElement('br'));el.appendChild(copy);
+  const open=document.createElement('a');open.className='action';open.href=supportUrl;open.target='_blank';open.rel='noopener';open.textContent='رفتن به آیدی پشتیبانی';el.appendChild(document.createElement('br'));el.appendChild(open);
+}
+document.querySelectorAll('.choose-shop').forEach(btn=>btn.addEventListener('click',()=>{
+  document.getElementById('shopOrder').style.display='block';
+  document.getElementById('shopCategory').value=btn.dataset.category;
+  document.getElementById('shopBudget').value=btn.dataset.budget;
+  document.getElementById('shopHeading').textContent='سفارش: '+btn.dataset.category;
+  document.getElementById('shopNotice').classList.remove('show');
+  document.getElementById('shopOrder').scrollIntoView({behavior:'smooth',block:'start'});
+}));
+document.getElementById('shopForm').addEventListener('submit',e=>{
+  e.preventDefault();const d=new FormData(e.target);
+  const text=`سلام، برای خرید از Reza Store سفارش دارم.\nدسته: ${d.get('category')}\nبازه بودجه: ${d.get('budget')}\nبودجه دقیق: ${d.get('exactBudget')}\nتوضیحات: ${d.get('details')||'ندارد'}\nجهت تکمیل سفارش به آیدی @Reza_RDidd پیام می‌دهم و اطلاعات لازم را ارسال می‌کنم.`;
+  const n=document.getElementById('shopNotice');n.innerHTML='';showNotice(n,text);
+});
+document.querySelectorAll('.choose-ad').forEach(btn=>btn.addEventListener('click',()=>{
+  document.getElementById('adOrder').style.display='block';
+  document.getElementById('adPlan').value=btn.dataset.plan;
+  document.getElementById('adPrice').value=btn.dataset.price;
+  document.getElementById('adHeading').textContent='تعرفه انتخاب‌شده: '+btn.dataset.plan+' — '+btn.dataset.price;
+  document.getElementById('replyLabel').style.display=btn.dataset.reply==='yes'?'grid':'none';
+  document.getElementById('adNotice').classList.remove('show');
+  document.getElementById('adOrder').scrollIntoView({behavior:'smooth',block:'start'});
+}));
+document.getElementById('adForm').addEventListener('submit',e=>{
+  e.preventDefault();const d=new FormData(e.target);
+  const text=`سلام، سفارش تبلیغ در Reza Store دارم.\nتعرفه: ${d.get('plan')}\nقیمت: ${d.get('price')}\nلینک پست/کانال: ${d.get('adLink')}\nمتن بنر/تبلیغ: ${d.get('bannerText')}\nمتن تکمیلی: ${d.get('extraText')||'ندارد'}\nمتن ریپلای: ${d.get('replyText')||'ندارد'}\nجهت تکمیل سفارش به آیدی @Reza_RDidd پیام می‌دهم و تمام اطلاعات و مدارک لازم را ارسال می‌کنم.`;
+  const n=document.getElementById('adNotice');n.innerHTML='';showNotice(n,text);
+});
+document.getElementById('giftForm').addEventListener('submit',e=>{
+  e.preventDefault();const d=new FormData(e.target);
+  const text=`سلام، برای اکانت هدیه Reza Store درخواست دارم.\nجهت تکمیل درخواست به آیدی @Reza_RDidd پیام می‌دهم و تمام مدارک لازم را ارسال می‌کنم.`;
+  const n=document.getElementById('giftNotice');n.innerHTML='';showNotice(n,text);
+});
+</script>
+</body>
+</html>
